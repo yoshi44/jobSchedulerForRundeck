@@ -2,6 +2,7 @@
   executionEnabled: true
   id: ebb90e3a-bfc6-4c93-b07a-b38f01fc1884
   loglevel: INFO
+  multipleExecutions: true
   name: yesod-api metal info job
   nodeFilterEditable: false
   notification:
@@ -15,8 +16,8 @@
       day: '*'
     month: '*'
     time:
-      hour: '8'
-      minute: '0'
+      hour: '08'
+      minute: '00'
       seconds: '0'
     year: '*'
   scheduleEnabled: true
