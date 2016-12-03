@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar rundeck-launcher-2.7.1.jar
