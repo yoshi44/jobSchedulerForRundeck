@@ -9,12 +9,13 @@
       email:
         recipients: yoshinihon@gmail.com
         subject: Failure Rudeck job yesod-api metal info job
+  retry: '3'
   schedule:
     dayofmonth:
       day: '*'
     month: '*'
     time:
-      hour: '14,15'
+      hour: '8'
       minute: '0'
       seconds: '0'
     year: '*'
