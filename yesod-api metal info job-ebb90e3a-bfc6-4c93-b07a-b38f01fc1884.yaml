@@ -1,0 +1,33 @@
+- description: ''
+  executionEnabled: true
+  id: ebb90e3a-bfc6-4c93-b07a-b38f01fc1884
+  loglevel: INFO
+  multipleExecutions: true
+  name: yesod-api metal info job
+  nodeFilterEditable: false
+  notification:
+    onfailure:
+      email:
+        recipients: yoshinihon@gmail.com
+        subject: Failure Rudeck job yesod-api metal info job
+  retry: '3'
+  schedule:
+    dayofmonth:
+      day: '*'
+    month: '*'
+    time:
+      hour: '08'
+      minute: '00'
+      seconds: '0'
+    year: '*'
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - exec: cd ${HOME}/yesod-api/ && stack runghc batch/MetalInfoBatch.hs
+    keepgoing: false
+    pluginConfig:
+      WorkflowStrategy:
+        node-first: null
+    strategy: node-first
+  uuid: ebb90e3a-bfc6-4c93-b07a-b38f01fc1884
+
