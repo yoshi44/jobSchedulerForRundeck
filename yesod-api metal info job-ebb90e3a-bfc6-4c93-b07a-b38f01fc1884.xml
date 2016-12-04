@@ -1,0 +1,35 @@
+<joblist>
+  <job>
+    <description></description>
+    <executionEnabled>true</executionEnabled>
+    <id>ebb90e3a-bfc6-4c93-b07a-b38f01fc1884</id>
+    <loglevel>INFO</loglevel>
+    <multipleExecutions>true</multipleExecutions>
+    <name>yesod-api metal info job</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <notification>
+      <onfailure>
+        <email recipients='yoshinihon@gmail.com' subject='Failure Rudeck job yesod-api metal info job' />
+      </onfailure>
+    </notification>
+    <retry>3</retry>
+    <schedule>
+      <dayofmonth />
+      <month day='*' month='*' />
+      <time hour='08' minute='00' seconds='0' />
+      <year year='*' />
+    </schedule>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <exec>cd ${HOME}/yesod-api/ &amp;&amp; stack runghc batch/MetalInfoBatch.hs</exec>
+      </command>
+      <pluginConfig>
+        <WorkflowStrategy>
+          <node-first />
+        </WorkflowStrategy>
+      </pluginConfig>
+    </sequence>
+    <uuid>ebb90e3a-bfc6-4c93-b07a-b38f01fc1884</uuid>
+  </job>
+</joblist>
